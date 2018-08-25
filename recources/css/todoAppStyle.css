@@ -1,5 +1,6 @@
-:root{
+:root {
     --main_color: #4fc2f7d8;
+    --input_color: rgb(6, 78, 145);
 }
 
 body {
@@ -10,26 +11,34 @@ body {
 }
 
 header {
-    margin-top: 1rem;
+    margin-top: 1.5rem;
     padding: 1rem;
     box-shadow: 0 2px 4px rgba(44, 62, 80, .15);
     background: var(--main_color);
 }
 
+#item {
+    color: var(--input_color);
+}
+
 header input {
-    color: var(--main_color);
     text-indent: 1.5rem;
     padding: 0 60px 0 0;
     background: rgba(255, 255, 255, 0.829);
-    border-radius: 5px 25px 25px 5px;
+    border-radius: 10px 10px 10px 10px;
     border: 0;
     height: 3.3rem;
-    width: 90%;
+    width: 80%;
     letter-spacing: 0.1rem;
     font-size: 20px;
 }
 
-.fa-plus{
+header input:focus {
+    outline: none;
+    box-shadow: 0 0 15px rgb(6, 78, 145);
+}
+
+.fa-plus {
     color: var(--main_color);
 }
 
@@ -37,12 +46,25 @@ header button {
     border-radius: 25px;
     background: #fff;
     border: 0;
-    height: 3rem;
-    width: 3rem;
+    height: 3.5rem;
+    width: 3.1rem;
     cursor: pointer;
-    margin-top: 0.4rem;
-    margin-left: -3.3rem;
-    /* padding-bottom: 1px; */
+    /* k */
+    margin-left: 1rem;
+    vertical-align: middle;
+    transition: box-shadow .3s;
+}
+
+header button:focus {
+    outline: none;
+}
+
+header button:hover {
+    box-shadow: 0 0 15px rgb(6, 78, 145);
+}
+
+header button:first-child:hover {
+    color: var(--input_color);
 }
 
 .buttons {
@@ -58,22 +80,28 @@ header button {
     transition: fill .4s ease;
 }
 
+button:hover {
+    cursor: pointer;
+}
+
 .complete {
-    border: 0.1rem solid #228b22;
+    border: 0;
+    background: transparent;
+    transition: color .4s;
 }
 
 .complete:hover {
-    background: #fff;
-    cursor: pointer;
+    color: green;
 }
 
 .remove {
-    background: #c0cecb;
+    border: 0;
+    background: transparent;
+    transition: color .4s;
 }
 
 .remove:hover {
-    background: #e85656;
-    cursor: pointer;
+    color: red;
 }
 
 ul {
@@ -81,7 +109,7 @@ ul {
     padding: 0;
 }
 
-li{
+li {
     border: 1px solid var(--main_color);
 }
 
@@ -121,5 +149,5 @@ li{
 }
 
 ::placeholder {
-    color: #4fc2f7d8;
+    color: #83d2f7e1;
 }

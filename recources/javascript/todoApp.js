@@ -98,8 +98,8 @@
             `
             <li data-id="${data.id}">${data.value}
                 <div class="buttons">
-                    <button class="complete">&#10004</button>
-                    <button class="remove">&#10007</button>
+                    <button class="complete"><i class="fas fa-check-circle fa-lg"></i></button>
+                    <button class="remove"><i class="fas fa-minus-circle fa-lg"></i></button>
                 </div>
             </li>
         `
