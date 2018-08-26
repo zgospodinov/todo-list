@@ -18,19 +18,19 @@
 
     <header>
         <div class="task-input">
-                <i class="fas fa-clipboard-check fa-3x"></i>
-                <input type="text" placeholder="Enter an activity" id="item">
-                <button id="add">
-                    <i id="add_button-hover" class="fas fa-plus fa-2x"></i>
-                </button>
+            <i class="fas fa-clipboard-check fa-3x"></i>
+            <input type="text" placeholder="Enter an activity" id="item">
+            <button id="add">
+                <i id="add_button-hover" class="fas fa-plus fa-2x"></i>
+            </button>
         </div>
     </header>
 
     <div class="container">
 
-        <ul class="todo" id="todo"></ul>
-
-        <ul class="todo" id="completed"></ul>
+        <div class="container-ongoing"><ul class="todo" id="todo"></ul></div>
+        <div class="container-done"><ul class="todo" id="completed"></ul></div>
+        
     </div>
 
     <script type="text/javascript" src="recources/javascript/todoApp.js"></script>
