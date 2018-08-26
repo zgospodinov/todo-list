@@ -89,7 +89,9 @@
 
     function attach_to_dom(data) {
         var placeholder = data.completed ? completed : todo;
-        placeholder.innerHTML += render(data);
+        // placeholder.innerHTML += render(data);
+        placeholder.insertAdjacentHTML('afterbegin', render(data));
+        
 
     };
 

@@ -42,6 +42,28 @@ header input:focus {
     color: var(--main_color);
 }
 
+
+.fa-check-circle:focus,
+.fa-minus-circle:focus{
+    outline: none;
+    border: 0;
+}
+
+.fa-check-circle,
+.fa-minus-circle{    
+    transition: color .4s;
+}
+
+.fa-minus-circle:hover{
+    color: #f50057;
+}
+
+.fa-check-circle:hover{
+    color: #00e676;
+}
+
+
+
 .fa-check-circle:hover,
 .fa-minus-circle:hover{
     cursor: pointer;
@@ -74,21 +96,24 @@ header button:first-child:hover {
 
 .buttons {
     float: right;
+    /* font-size: 25px; */
 }
 
 .button button {
     cursor: pointer;
     border: 1rem solid transparent;
     vertical-align: middle;
-    width: 4rem;
-    height: 4rem;
+    width: 6rem;
+    height: 6rem;
     transition: fill .4s ease;
 }
 
 .item-btn {
-    color: rgb(177, 177, 177);
-    z-index: -20;
+    color: rgb(177, 177, 177);   
+    
 }
+
+
 
 button:hover {
     /* cursor: pointer; */
@@ -100,9 +125,9 @@ button:hover {
     transition: color .4s;
 }
 
-.complete:hover {
+/* .complete:hover {
     color: green;
-}
+} */
 
 .remove {
     border: 0;
@@ -110,9 +135,9 @@ button:hover {
     transition: color .4s;
 }
 
-.remove:hover {
+/* .remove:hover {
     color: red;
-}
+} */
 
 ul {
     list-style: none;
