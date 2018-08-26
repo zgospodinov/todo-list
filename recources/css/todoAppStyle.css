@@ -6,7 +6,7 @@
 body {
     background: #edf0f1;
     margin: auto;
-    max-width: 45em;
+    max-width: 50em;
     font-family: 'Lato', sans-serif;
 }
 
@@ -17,20 +17,50 @@ header {
     background: var(--main_color);
 }
 
+.container {
+    margin: auto;
+    max-width: 45rem;
+}
+
+.task-input {
+    vertical-align: middle;
+    width: 100%;
+    margin-left: 1.5rem;
+}
+
 #item {
     color: var(--input_color);
 }
 
+header i {
+    margin-right: 1rem;
+    vertical-align: middle;
+    color: white;
+    font-size: 30px;
+    height: auto;
+    padding-bottom: 2px;
+}
+
 header input {
+    /* margin-top: 5px; */
     text-indent: 1.5rem;
-    padding: 0 60px 0 0;
+    padding: 12px 60px 15px 0;
     background: rgba(255, 255, 255, 0.829);
     border-radius: 10px 10px 10px 10px;
     border: 0;
-    height: 3.3rem;
-    width: 80%;
+    height: 100%;
+    width: 70%;
     letter-spacing: 0.1rem;
     font-size: 20px;
+}
+
+#add {
+    text-align: center;
+    padding: 0;
+}
+
+#add i {
+    padding-left: 13px;
 }
 
 header input:focus {
@@ -42,30 +72,27 @@ header input:focus {
     color: var(--main_color);
 }
 
-
 .fa-check-circle:focus,
-.fa-minus-circle:focus{
+.fa-minus-circle:focus {
     outline: none;
     border: 0;
 }
 
 .fa-check-circle,
-.fa-minus-circle{    
+.fa-minus-circle {
     transition: color .4s;
 }
 
-.fa-minus-circle:hover{
+.fa-minus-circle:hover {
     color: #f50057;
 }
 
-.fa-check-circle:hover{
+.fa-check-circle:hover {
     color: #00e676;
 }
 
-
-
 .fa-check-circle:hover,
-.fa-minus-circle:hover{
+.fa-minus-circle:hover {
     cursor: pointer;
 }
 
@@ -73,7 +100,7 @@ header button {
     border-radius: 25px;
     background: #fff;
     border: 0;
-    height: 3.5rem;
+    height: 3.1rem;
     width: 3.1rem;
     cursor: pointer;
     /* k */
@@ -109,11 +136,8 @@ header button:first-child:hover {
 }
 
 .item-btn {
-    color: rgb(177, 177, 177);   
-    
+    color: rgb(177, 177, 177);
 }
-
-
 
 button:hover {
     /* cursor: pointer; */
