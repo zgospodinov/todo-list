@@ -1,13 +1,8 @@
 (function () {
 
-
-
-
     var data = localStorage.getItem("todoList") ? JSON.parse(localStorage.getItem("todoList")) : {
         items: []
     };
-
-
 
     update_local_storage();
 
@@ -50,31 +45,36 @@
         update_local_storage();
     };
 
-
     function button_click(event) {
         var target = event.target;
-        if (target.tagName !== "BUTTON") return;
+        
+        if (target.parentNode.tagName !== "BUTTON") return;
 
-        var li = target.parentNode.parentNode;
+        var li = target.parentNode.parentNode.parentNode;
+        
         var data_id = parseInt(li.getAttribute('data-id'));
-
-        if (target.className == "remove") {
+        
+        if (target.parentNode.className == "remove") {
             remove_item(data_id);
             li.parentNode.removeChild(li);
         };
 
-        if (target.className == "complete") {
+        if (target.parentNode.className == "complete") {
             update_item(data_id);
         };
         update_local_storage();
-        li.parentNode.removeChild(li);
+        
+        console.log(li.parentNode);
+        if(target.parentNode.className != "remove"){
+            li.parentNode.removeChild(li);
+        }
     };
 
     function update_item(search) {
         for (var j = 0; j < data.items.length; j++) {
             if (data.items[j].id == search) {
                 data.items[j].completed = !data.items[j].completed;
-                
+
                 attach_to_dom(data.items[j]);
                 break;
             };
@@ -98,8 +98,8 @@
             `
             <li data-id="${data.id}">${data.value}
                 <div class="buttons">
-                    <button class="complete"><i class="fas fa-check-circle fa-lg"></i></button>
-                    <button class="remove"><i class="fas fa-minus-circle fa-lg"></i></button>
+                    <button class="complete"><i class="fas fa-check-circle fa-lg item-btn"></i></button>
+                    <button class="remove"><i class="fas fa-minus-circle fa-lg item-btn"></i></button>
                 </div>
             </li>
         `
